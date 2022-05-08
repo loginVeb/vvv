@@ -1,7 +1,8 @@
 import React from 'react';
 import img from './img/header1.png';
 import styled from 'styled-components';
-//import { device } from '../@media';
+// import Like from '../1icons/iconca.svg';
+import Like from '../2iconComponens/like';
 
 const SHeader = styled.header`
   grid-area: 1/1/2/13;
@@ -10,15 +11,17 @@ const SHeader = styled.header`
   grid-template-rows:repeat(12, 8.333%); 
   background-image: url(${img});
   background-size:cover;
-  font-family:Fon.woff2 ;
+  font-family:"Fonwoff2" ;
   border: solid 0.2px blue; 
+
 `
 
 
 const Header = () => {
   return (
     <SHeader>
-      
+<Like/>
+       {/* <img height= "50px" src={Like} alt="Like" /> */}
     </SHeader>
   );
 
