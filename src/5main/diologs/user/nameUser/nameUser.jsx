@@ -17,7 +17,7 @@ font-family:'NameOfYourFontWoff2' ;
 `;
 
 const NameLink = styled(NavLink)`
-pading:10px;
+padding:10px;
 text-decoration:none;
 `;
 
