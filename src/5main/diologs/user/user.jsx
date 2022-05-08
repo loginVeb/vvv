@@ -7,7 +7,7 @@ grid-area:1/1/13/5;
 display:flex;
 flex-direction:column;
 color:green;
-font-family:DSMoster.woff ;
+font-family:'NameOfYourFontWoff2' ;
 border: solid 0.2px blue ;
 `;
 

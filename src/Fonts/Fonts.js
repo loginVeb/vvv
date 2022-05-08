@@ -8,13 +8,24 @@ import TopSecretWoff2 from './TopSecret.woff2';
 import TopSecretWoff from './TopSecret.woff';
 import DSMosterWoff2 from './DSMoster.woff2';
 import DSMosterWoff from './DSMoster.woff';
+import MaracayShadeWoff2 from './MaracayShade.woff2';
+import MaracayShadeWoff from './MaracayShade.woff';
 
 export default createGlobalStyle`
     @font-face {
         font-family: 'NameOfYourFontWoff2';
-        src: local('NameOfYourFontWoff2'), local('NameOfYourFontWoff2'),
+        src: local('NameOfYourFontWoff'), local('NameOfYourFontWoff2'),
         url(${NameOfYourFontWoff2}) format('woff2'),
         url(${NameOfYourFontWoff}) format('woff');
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'MaracayShadeWoff2';
+        src: local('MaracayShadeWoff'), local('MaracayShadeWoff'),
+        url(${MaracayShadeWoff2}) format('woff2'),
+        url(${MaracayShadeWoff}) format('woff');
         font-weight: 300;
         font-style: normal;
     }

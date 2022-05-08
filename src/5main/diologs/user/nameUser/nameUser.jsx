@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const SNameUser = styled.div`
 grid-area:1/1/13/5;
 color:green;
-font-family:DSMoster.woff ;
+font-family:'NameOfYourFontWoff2' ;
 //border: solid 3px #ecfffe;
     &:hover {
             color: Black ;

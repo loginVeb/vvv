@@ -6,7 +6,7 @@ const SMessages = styled.div`
 grid-area:1/5/13/13;
 background: #cefefe ;
 color:green;
-font-family:DSMoster.woff ;
+font-family:DSMosterwoff ;
 //border: solid 0.2px blue ;
 `
  const Messages = () => {

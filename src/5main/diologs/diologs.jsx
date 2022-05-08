@@ -10,7 +10,7 @@ grid-template-columns:repeat(12, 8.333%);
 grid-template-rows:repeat(12, 8.333%); 
 background: #cefefe ;
 color:green;
-font-family:DSMoster.woff ;
+font-family:'NameOfYourFontWoff2' ;
 //border: solid 0.2px blue ;
 `
  const Diologs = () => {

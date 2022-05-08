@@ -11,7 +11,7 @@ grid-template-columns:repeat(12, 8.333%);
 grid-template-rows:repeat(12, 8.333%); 
 background: #cefefe ;
 color:red;
-  font-family:DSMoster.woff ;
+  font-family:'NameOfYourFontWoff2' ;
 //border: solid 0.2px blue ;
 `
  const Main = () => {
