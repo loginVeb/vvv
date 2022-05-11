@@ -7,7 +7,13 @@ grid-area:1/5/13/13;
 background: #cefefe ;
 color:green;
 font-family:DSMosterwoff ;
-//border: solid 0.2px blue ;
+border: solid 0.2px blue ;
+
+        &:active {
+            color: #ffffff ;
+        }
+
+
 `
  const Messages = () => {
   return (

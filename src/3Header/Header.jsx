@@ -1,8 +1,9 @@
 import React from 'react';
 import img from './img/header1.png';
 import styled from 'styled-components';
-// import Like from '../1icons/iconca.svg';
-import Like from '../2iconComponens/like';
+ import Burger from './burgerMeny/burger.jsx';
+ 
+
 
 const SHeader = styled.header`
   grid-area: 1/1/2/13;
@@ -20,8 +21,7 @@ const SHeader = styled.header`
 const Header = () => {
   return (
     <SHeader>
-<Like/>
-       {/* <img height= "50px" src={Like} alt="Like" /> */}
+       <Burger/>
     </SHeader>
   );
 
