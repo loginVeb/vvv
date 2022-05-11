@@ -22,10 +22,10 @@ text-decoration:none;
  const Nav = () => {
   return (
 <SNav> 
-<SNavLink to="/profile" activeStyle={{
+<SNavLink to="/SProfileInfo" activeStyle={{
     fontWeight: "bold",
     color: "red"
-  }}> profile </SNavLink>
+  }}>ProfileInfo</SNavLink>
 <SNavLink to="/diologs" activeStyle={{
     fontWeight: "bold",
     color: "red"
