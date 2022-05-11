@@ -22,9 +22,10 @@ text-decoration:none;
 `;
 
 const NameUser = (props) => {
+const patch = '/diologs/' + props.id;
 return (
 <SNameUser>
-<NameLink to={'/diologs/' + props.id} activeStyle={{
+<NameLink to={patch} activeStyle={{
     fontWeight: "bold",
     color: "red"
   }}>{props.name}</NameLink>

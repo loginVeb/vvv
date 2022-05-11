@@ -17,7 +17,7 @@ color:red;
  const Main = () => {
   return (
 <SMain> 
-<Route path='/profile' render={() => <Profile/>} />
+<Route path='/Profile' render={() => <Profile />} />
 
 <Route path='/diologs' render={() => <Diologs/>} />
 

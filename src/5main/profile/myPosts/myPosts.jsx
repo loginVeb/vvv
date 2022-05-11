@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import MyPost from './myPosts/myPosts.jsx';
-import ProfileInfo from './profileInfo/profileInfo.jsx' ;
 
-const SProfile = styled.div`
-grid-area:1/1/13/13;
+const SMyPost = styled.div`
+grid-area:3/1/5/13;
 display: grid;
 grid-template-columns:repeat(12, 8.333%);  
 grid-template-rows:repeat(12, 8.333%); 
@@ -13,13 +11,12 @@ color:green;
 font-family:'NameOfYourFontWoff2';
 border: solid 0.1px blue ;
 `
- const Profile = () => {
+ const MyPost = () => {
   return (
-<SProfile> 
-<ProfileInfo/>
-   <MyPost/>
-</SProfile>
+<SMyPost> 
+   MyPost
+</SMyPost>
   );
 };
 
-export default Profile;
+export default MyPost;
