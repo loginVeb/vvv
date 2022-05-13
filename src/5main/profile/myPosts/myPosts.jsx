@@ -1,22 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
+import Post from './post/post.jsx';
 
-const SMyPost = styled.div`
+const SMyPosts = styled.div`
 grid-area:3/1/5/13;
-display: grid;
-grid-template-columns:repeat(12, 8.333%);  
-grid-template-rows:repeat(12, 8.333%); 
-background: #cefefe ;
+
+display:flex;
+flex-direction:column;
 color:green;
 font-family:'NameOfYourFontWoff2';
-border: solid 0.1px blue ;
+
 `
- const MyPost = () => {
+ const MyPosts = () => {
   return (
-<SMyPost> 
-   MyPost
-</SMyPost>
+<SMyPosts> 
+   <textarea>text</textarea>
+   <button>add post</button>
+    <div>
+   <Post message="как дела" likeCount="3"/>
+   <Post message="нормально" likeCount="0"/>
+</div>
+</SMyPosts>
   );
 };
 
-export default MyPost;
+export default MyPosts;

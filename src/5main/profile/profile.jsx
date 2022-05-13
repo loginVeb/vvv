@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import MyPost from './myPosts/myPosts.jsx';
+import MyPosts from './myPosts/myPosts.jsx';
 import ProfileInfo from './profileInfo/profileInfo.jsx' ;
 
 const SProfile = styled.div`
@@ -17,7 +17,7 @@ border: solid 0.1px blue ;
   return (
 <SProfile> 
 <ProfileInfo/>
-   <MyPost/>
+   <MyPosts/>
 </SProfile>
   );
 };

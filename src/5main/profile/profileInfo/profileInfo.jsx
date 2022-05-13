@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import img from './img.jpg';
 const SProfileInfo = styled.div`
 grid-area:1/1/3/13;
-display: grid;
-grid-template-columns:repeat(12, 8.333%);  
-grid-template-rows:repeat(12, 8.333%); 
+display:flex;
+flex-direction:column;
 background: #cefefe ;
 color:green;
 font-family:'NameOfYourFontWoff2';
@@ -14,7 +13,13 @@ border: solid 0.1px blue ;
  const ProfileInfo = () => {
   return (
 <SProfileInfo > 
-   ProfileInfo
+ <div>
+ <img src={img} alt="ura" height="30px"
+width="30px"/>
+ </div>
+  <div>
+  Ava+discription
+  </div>
 </SProfileInfo>
   );
 };
