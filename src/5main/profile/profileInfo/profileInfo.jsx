@@ -7,7 +7,7 @@ display:flex;
 flex-direction:column;
 background: #cefefe ;
 color:green;
-font-family:'NameOfYourFontWoff2';
+font-family:'tucsononewoff2';
 border: solid 0.1px blue ;
 `
  const ProfileInfo = () => {

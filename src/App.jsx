@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { device } from './@media';
-import GlobalFonts from './Fonts/Fonts';
+import GlobalFonts from './2fonts/Fonts';
 import { BrowserRouter, Route } from "react-router-dom";
 import Header from './3Header/Header';
 import Nav from './4nav/nav.jsx';

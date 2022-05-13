@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import Post from './post/post.jsx';
 
 const SMyPosts = styled.div`
-grid-area:3/1/5/13;
+grid-area:3/1/13/13;
 
 display:flex;
 flex-direction:column;
 color:green;
-font-family:'NameOfYourFontWoff2';
+font-family:'tucsononewoff2';
 
 `
  const MyPosts = () => {

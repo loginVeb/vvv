@@ -12,7 +12,7 @@ const SHeader = styled.header`
   grid-template-rows:repeat(12, 8.333%); 
   background-image: url(${img});
   background-size:cover;
-  font-family:"Fonwoff2" ;
+  font-family:"tucsononewoff2" ;
   border: solid 0.2px blue; 
 
 `

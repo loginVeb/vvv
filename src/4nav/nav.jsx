@@ -8,7 +8,7 @@ display:flex;
 flex-direction:column;
 background: #cefefe ;
 color:red;
-font-family: 'TopSecretWoff2';
+font-family: 'tucsononewoff2';
 border: solid 0.2px blue ;
 `
 const SNavLink = styled(NavLink)`
