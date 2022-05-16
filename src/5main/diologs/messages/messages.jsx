@@ -16,12 +16,20 @@ border: solid 0.2px blue ;
 
 `
  const Messages = () => {
+   
+let massageData = [
+{id:0, massage:'привет'}, 
+{id:1, massage:'здрастуйте'}, 
+{id:2, massage:'пока'}, 
+{id:3, massage:'досвидания'}, 
+]
+   
   return (
 <SMessages>
-  <div> привет  </div>
- <div> здравствуйте </div>
- <div> пока  </div>
- <div> дасвидание  </div>
+  <div id={massageData[0].id}>{massageData[0].massage}</div>
+  <div id={massageData[1].id}>{massageData[1].massage}</div>
+  <div id={massageData[2].id}>{massageData[2].massage}</div>
+  <div id={massageData[3].id}>{massageData[3].massage}</div>
  </SMessages>
   );
 };

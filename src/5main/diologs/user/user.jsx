@@ -12,12 +12,22 @@ border: solid 0.2px blue ;
 `;
 
 const Users = () => {
+  
+
+let diologsData = [
+{id:1, name:'Pavel'}, 
+{id:2, name:'Valentina '}, 
+{id:3, name:'Anatoliy'}, 
+{id:4, name:'Anastasiya'}, 
+];
+
+  
 return (
 <SUsers>
-<NameUser name="Pavel" id="1"/> 
-<NameUser name="Valentina" id="2"/>
-<NameUser name="Anatoliy" id="3"/>
-<NameUser name="Valentina" id="4"/>
+<NameUser name={diologsData[0].name} id={diologsData[0].id} /> 
+<NameUser name={diologsData[1].name} id=   {diologsData[1].id} />
+<NameUser name={diologsData[2].name} id={diologsData[2].id} />
+<NameUser name={diologsData[3].name} id={diologsData[3].id}/>
  </SUsers>
   );
 };

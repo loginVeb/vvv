@@ -12,13 +12,19 @@ font-family:'tucsononewoff2';
 
 `
  const MyPosts = () => {
+   
+let postData = [
+{id:0, massage:'как дела друг', likeCount:152}, 
+{id:1, massage:'нормально', likeCount:15}, 
+]
+   
   return (
 <SMyPosts> 
    <textarea>text</textarea>
    <button>add post</button>
     <div>
-   <Post message="как дела" likeCount="3"/>
-   <Post message="нормально" likeCount="0"/>
+   <Post message={postData[0].massage} likeCount={postData[0].likeCount} id={postData[0].id}/>
+     <Post message={postData[1].massage} likeCount={postData[1].likeCount} id={postData[1].id}/>
 </div>
 </SMyPosts>
   );
