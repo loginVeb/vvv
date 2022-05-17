@@ -22,14 +22,15 @@ let massageData = [
 {id:1, massage:'здрастуйте'}, 
 {id:2, massage:'пока'}, 
 {id:3, massage:'досвидания'}, 
+{id:3, massage:'урааааа'}, 
 ]
+   
+let massageDataMap = massageData.map((el) =>{return <div id={el.id}> {el.massage} </div>
+  });
    
   return (
 <SMessages>
-  <div id={massageData[0].id}>{massageData[0].massage}</div>
-  <div id={massageData[1].id}>{massageData[1].massage}</div>
-  <div id={massageData[2].id}>{massageData[2].massage}</div>
-  <div id={massageData[3].id}>{massageData[3].massage}</div>
+{massageDataMap} 
  </SMessages>
   );
 };

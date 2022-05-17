@@ -16,15 +16,19 @@ font-family:'tucsononewoff2';
 let postData = [
 {id:0, massage:'как дела друг', likeCount:152}, 
 {id:1, massage:'нормально', likeCount:15}, 
-]
+{id:2, massage:'урв', likeCount:100},
+];
+
+let postDataNev = postData.map((el) => {
+ return <Post message={el.massage} likeCount={el.likeCount} id={el.id}/>
+});
    
   return (
 <SMyPosts> 
    <textarea>text</textarea>
    <button>add post</button>
     <div>
-   <Post message={postData[0].massage} likeCount={postData[0].likeCount} id={postData[0].id}/>
-     <Post message={postData[1].massage} likeCount={postData[1].likeCount} id={postData[1].id}/>
+   {postDataNev} 
 </div>
 </SMyPosts>
   );
