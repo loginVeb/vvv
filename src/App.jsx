@@ -20,14 +20,15 @@ border: solid 1px blue;
 }
 `
 
-function App() {
+function App(props) {
+
   return (
 <BrowserRouter >
 <StyleAppWrapper>
 <GlobalFonts />
 <Route path='/' render={() => <Header />} />
 <Route path='/' render={() => < Nav/>} />
-<Route path='/' render={() => <Main/>} />
+<Route path='/' render={() => <Main redux={props} />} />
 </StyleAppWrapper>
 </BrowserRouter>
   );

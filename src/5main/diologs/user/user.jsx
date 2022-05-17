@@ -11,17 +11,10 @@ font-family:'NameOfYourFontWoff2' ;
 border: solid 0.2px blue ;
 `;
 
-const Users = () => {
+const Users = (props ) => {
   
-let diologsData = [
-{id:0, name:'Pavel'}, 
-{id:1, name:'Valentina '}, 
-{id:2, name:'Anatoliy'}, 
-{id:3, name:'Anastasiya'}, 
-{id:4, name:'Manya'}, 
-];
 
-let diologsDataNev = diologsData.map((el) => {
+let diologsDataNev = props.redux.diologsData.map((el) => {
 return <NameUser name={el.name} id={el.id}/>
 });
   

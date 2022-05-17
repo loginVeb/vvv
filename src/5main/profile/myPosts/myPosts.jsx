@@ -11,15 +11,9 @@ color:green;
 font-family:'tucsononewoff2';
 
 `
- const MyPosts = () => {
+ const MyPosts = (props ) => {
    
-let postData = [
-{id:0, massage:'как дела друг', likeCount:152}, 
-{id:1, massage:'нормально', likeCount:15}, 
-{id:2, massage:'урв', likeCount:100},
-];
-
-let postDataNev = postData.map((el) => {
+let postDataNev = props.redux.postData.map((el) => {
  return <Post message={el.massage} likeCount={el.likeCount} id={el.id}/>
 });
    

@@ -13,11 +13,11 @@ color:green;
 font-family:'tucsononewoff2';
 border: solid 0.1px blue ;
 `
- const Profile = () => {
+ const Profile = (props ) => {
   return (
 <SProfile> 
-<ProfileInfo/>
-   <MyPosts/>
+<ProfileInfo />
+   <MyPosts redux={props.redux} />
 </SProfile>
   );
 };

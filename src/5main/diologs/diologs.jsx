@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Users from './user/user.jsx'
-import Messages from './messages/messages'
+import Users from './user/user.jsx';
+import Messages from './messages/messages';
 
 const SDiologs = styled.div`
 grid-area:1/1/13/13;
@@ -13,11 +13,11 @@ color:green;
 font-family:'NameOfYourFontWoff2' ;
 //border: solid 0.2px blue ;
 `
- const Diologs = () => {
+ const Diologs = (props ) => {
   return (
 <SDiologs>
-    <Users/>
-    <Messages/>
+    <Users redux={props.redux} />
+    <Messages redux={props.redux} />
  </SDiologs>
   );
 };
