@@ -13,10 +13,11 @@ const Avatar = styled.img`
 `;
 
  const Post = (props) => {
+   
   return (
 <SPost> 
 
- <div><Avatar src={img2} alt="ura" width="10px" height="10px"/>{props.message} {props.likeCount}</div> 
+ <div><Avatar src={img2} alt="ura"/>{props.message} {props.likeCount}</div> 
 </SPost>
   );
 };

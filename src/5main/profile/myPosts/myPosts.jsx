@@ -12,11 +12,12 @@ font-family:'tucsononewoff2';
 
 `
  const MyPosts = (props ) => {
-   
-let postDataNev = props.redux.postData.map((el) => {
+let postDataNev = props.postData.map((el) => {
  return <Post message={el.massage} likeCount={el.likeCount} id={el.id}/>
+
+
 });
-   
+
   return (
 <SMyPosts> 
    <textarea>text</textarea>

@@ -28,7 +28,7 @@ function App(props) {
 <GlobalFonts />
 <Route path='/' render={() => <Header />} />
 <Route path='/' render={() => < Nav/>} />
-<Route path='/' render={() => <Main redux={props} />} />
+<Route path='/' render={() => <Main state={props.state} />} />
 </StyleAppWrapper>
 </BrowserRouter>
   );

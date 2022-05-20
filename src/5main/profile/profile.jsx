@@ -17,7 +17,7 @@ border: solid 0.1px blue ;
   return (
 <SProfile> 
 <ProfileInfo />
-   <MyPosts redux={props.redux} />
+   <MyPosts postData={props.postData} />
 </SProfile>
   );
 };

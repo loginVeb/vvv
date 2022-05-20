@@ -15,17 +15,11 @@ border: solid 0.2px blue ;
 
 
 `
- const Messages = () => {
+ const Messages = (props) => {
    
-let massageData = [
-{id:0, massage:'привет'}, 
-{id:1, massage:'здрастуйте'}, 
-{id:2, massage:'пока'}, 
-{id:3, massage:'досвидания'}, 
-{id:3, massage:'урааааа'}, 
-]
+
    
-let massageDataMap = massageData.map((el) =>{return <div id={el.id}> {el.massage} </div>
+let massageDataMap = props.massageData.map((el) =>{return <div id={el.id}> {el.massage} </div>
   });
    
   return (

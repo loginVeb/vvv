@@ -14,13 +14,12 @@ color:red;
   font-family:'NameOfYourFontWoff2' ;
 //border: solid 0.2px blue ;
 `
- const Main = (props) => {
+const Main = (props) => {
   return (
-<SMain> 
-<Route path='/Profile' render={() => <Profile redux={props.redux} />} />
-
-<Route path='/diologs' render={() => <Diologs redux={props.redux} />} />
- </SMain>
+    <SMain>
+      <Route path='/Profile' render={() => <Profile postData={props.state.profilePage.postData} />} />
+      <Route path='/diologs' render={() => <Diologs diologsPage={props.state.diologsPage} />} />
+    </SMain>
   );
 };
 

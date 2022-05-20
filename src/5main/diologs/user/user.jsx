@@ -14,7 +14,7 @@ border: solid 0.2px blue ;
 const Users = (props ) => {
   
 
-let diologsDataNev = props.redux.diologsData.map((el) => {
+let diologsDataNev = props.diologsData.map((el) => {
 return <NameUser name={el.name} id={el.id}/>
 });
   

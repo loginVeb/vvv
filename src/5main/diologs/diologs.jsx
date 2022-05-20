@@ -14,10 +14,11 @@ font-family:'NameOfYourFontWoff2' ;
 //border: solid 0.2px blue ;
 `
  const Diologs = (props ) => {
+   debugger
   return (
 <SDiologs>
-    <Users redux={props.redux} />
-    <Messages redux={props.redux} />
+    <Users diologsData={props.diologsPage.diologsData} />
+    <Messages massageData={props.diologsPage.massageData} />
  </SDiologs>
   );
 };
