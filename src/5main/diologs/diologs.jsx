@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Users from './user/user.jsx';
 import Messages from './messages/messages';
+import TextareaDiv from './textarea/textarea';
 
 const SDiologs = styled.div`
 grid-area:1/1/13/13;
@@ -18,7 +19,11 @@ font-family:'NameOfYourFontWoff2' ;
   return (
 <SDiologs>
     <Users diologsData={props.diologsPage.diologsData} />
+    
     <Messages massageData={props.diologsPage.massageData} />
+    
+    <TextareaDiv />
+    
  </SDiologs>
   );
 };

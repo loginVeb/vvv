@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import img from './img.jpg';
+
 const SProfileInfo = styled.div`
 grid-area:1/1/3/13;
 display:flex;

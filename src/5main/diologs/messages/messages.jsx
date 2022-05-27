@@ -3,7 +3,7 @@ import styled from 'styled-components';
 //import Users from './user/user.jsx'
 
 const SMessages = styled.div`
-grid-area:1/5/13/13;
+grid-area:1/7/7/13;
 background: #cefefe ;
 color:green;
 font-family:DSMosterwoff ;

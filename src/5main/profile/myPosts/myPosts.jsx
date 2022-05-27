@@ -4,7 +4,6 @@ import Post from './post/post.jsx';
 
 const SMyPosts = styled.div`
 grid-area:3/1/13/13;
-
 display:flex;
 flex-direction:column;
 color:green;
