@@ -14,17 +14,17 @@ color:green;
 font-family:'NameOfYourFontWoff2' ;
 //border: solid 0.2px blue ;
 `
- const Diologs = (props ) => {
-   debugger
+const Diologs = (props) => {
+  debugger
   return (
-<SDiologs>
-    <Users diologsData={props.diologsPage.diologsData} />
-    
-    <Messages massageData={props.diologsPage.massageData} />
-    
-    <TextareaDiv />
-    
- </SDiologs>
+    <SDiologs>
+      <Users diologsData={props.diologsPage.diologsData} />
+
+      <Messages massageData={props.diologsPage.massageData} />
+
+      <TextareaDiv />
+
+    </SDiologs>
   );
 };
 

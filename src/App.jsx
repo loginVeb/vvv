@@ -20,15 +20,17 @@ border: solid 1px blue;
 }
 `
 
-function App(props) {
 
+
+function App(props) {
+ 
   return (
 <BrowserRouter >
 <StyleAppWrapper>
 <GlobalFonts />
 <Route path='/' render={() => <Header />} />
 <Route path='/' render={() => < Nav/>} />
-<Route path='/' render={() => <Main state={props.state} />} />
+<Route path='/' render={() => <Main state={props.state} newPost={props.newPost}/>} />
 </StyleAppWrapper>
 </BrowserRouter>
   );

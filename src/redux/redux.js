@@ -1,5 +1,5 @@
 
-const state ={
+const state = {
 
     profilePage: {
 
@@ -8,19 +8,19 @@ const state ={
             { id: 1, massage: 'нормально', likeCount: 15 },
         ],
 
-        
+
     },
 
     diologsPage: {
 
-        diologsData : [
+        diologsData: [
             { id: 0, name: 'Pavel' },
             { id: 1, name: 'Valentina ' },
             { id: 2, name: 'Anatoliy' },
             { id: 3, name: 'Anastasiya' },
         ],
 
-        massageData : [
+        massageData: [
             { id: 0, massage: 'привет' },
             { id: 1, massage: 'здрастуйте' },
             { id: 2, massage: 'пока' },
@@ -28,6 +28,13 @@ const state ={
         ]
 
     }
+};
+
+export let newPost = (text) => {
+    
+state.profilePage.postData.push({id: 0, massage: text, likeCount: 100,})
+    
+      
 };
 
 export default state;

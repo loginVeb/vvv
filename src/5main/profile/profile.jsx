@@ -14,10 +14,11 @@ font-family:'tucsononewoff2';
 border: solid 0.1px blue ;
 `
  const Profile = (props ) => {
+
   return (
 <SProfile> 
 <ProfileInfo />
-   <MyPosts postData={props.postData} />
+   <MyPosts postData={props.postData} newPost={props.newPost}/>
 </SProfile>
   );
 };

@@ -20,7 +20,6 @@ background: #cefefe ;
 `
 const Sbutton = styled.button`
 grid-area:10/1/13/4;
-background: #cefеее ;
 border: solid 0.2px blue ;
 border-radius:15px;
 `

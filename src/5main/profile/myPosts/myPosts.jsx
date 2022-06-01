@@ -10,21 +10,38 @@ color:green;
 font-family:'tucsononewoff2';
 
 `
- const MyPosts = (props ) => {
-let postDataNev = props.postData.map((el) => {
- return <Post message={el.massage} likeCount={el.likeCount} id={el.id}/>
 
 
-});
+
+const MyPosts = (props) => {
+ 
+
+
+ 
+
+  let postDataNev = props.postData.map((el) => {
+    return <Post message={el.massage} likeCount={el.likeCount} id={el.id} />
+
+  });
+
+  let linkRef = React.createRef();
+  
+
+
+  let addPost = () => {
+    let text = linkRef.current.value;
+  props.newPost(text);
+  }
 
   return (
-<SMyPosts> 
-   <textarea>text</textarea>
-   <button>add post</button>
-    <div>
-   {postDataNev} 
-</div>
-</SMyPosts>
+
+    <SMyPosts>
+      <textarea ref={linkRef}>text</textarea>
+      <button onClick={addPost}>add post</button>
+      <div>
+        {postDataNev}
+      </div>
+    </SMyPosts>
   );
 };
 

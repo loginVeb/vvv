@@ -14,9 +14,11 @@ color:red;
 //border: solid 0.2px blue ;
 `
 const Main = (props) => {
+
+
   return (
     <SMain>
-      <Route path='/Profile' render={() => <Profile postData={props.state.profilePage.postData} />} />
+      <Route path='/Profile' render={() => <Profile postData={props.state.profilePage.postData} newPost={props.newPost}/>} />
       <Route path='/diologs' render={() => <Diologs diologsPage={props.state.diologsPage} />} />
     </SMain>
   );
