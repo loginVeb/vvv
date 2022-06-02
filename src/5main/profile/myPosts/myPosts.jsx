@@ -31,6 +31,7 @@ const MyPosts = (props) => {
   let addPost = () => {
     let text = linkRef.current.value;
   props.newPost(text);
+linkRef.current.value = ' ';
   }
 
   return (

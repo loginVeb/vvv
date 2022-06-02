@@ -1,3 +1,4 @@
+import {renderEntireTree}  from '.././renderEntireTree.js';
 
 const state = {
 
@@ -34,7 +35,7 @@ export let newPost = (text) => {
     
 state.profilePage.postData.push({id: 0, massage: text, likeCount: 100,})
     
-      
+ renderEntireTree(state) ;
 };
 
 export default state;
