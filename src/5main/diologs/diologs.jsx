@@ -15,7 +15,7 @@ font-family:'NameOfYourFontWoff2' ;
 //border: solid 0.2px blue ;
 `
 const Diologs = (props) => {
-  debugger
+
   return (
     <SDiologs>
       <Users diologsData={props.diologsPage.diologsData} />

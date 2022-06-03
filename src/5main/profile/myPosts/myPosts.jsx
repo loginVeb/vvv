@@ -15,29 +15,28 @@ font-family:'tucsononewoff2';
 
 const MyPosts = (props) => {
  
-
-
- 
-
-  let postDataNev = props.postData.map((el) => {
+  let postDataNev = props.profilePage.postData.map((el) => {
     return <Post message={el.massage} likeCount={el.likeCount} id={el.id} />
-
   });
 
   let linkRef = React.createRef();
   
-
-
   let addPost = () => {
     let text = linkRef.current.value;
   props.newPost(text);
-linkRef.current.value = ' ';
+  props.unTextArea('');
+  }
+  
+  let onUpPost = () => {
+    let text = linkRef.current.value;
+    console.log(text);
+    props.unTextArea(text);
   }
 
   return (
 
     <SMyPosts>
-      <textarea ref={linkRef}>text</textarea>
+      <textarea ref={linkRef} value={props.profilePage.newTextArea} onChange={onUpPost}/>
       <button onClick={addPost}>add post</button>
       <div>
         {postDataNev}

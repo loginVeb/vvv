@@ -26,18 +26,18 @@ border-radius:15px;
 let newPost = React.createRef();
 
 let addPost = () => {
-  
- let text = newPost.current.value;
+
+  let text = newPost.current.value;
   alert(text);
 };
 
- const TextareaDiv = () => {
-   
+const TextareaDiv = () => {
+
   return (
-<STextareaDiv>
-<Stextarea ref={newPost}>777</Stextarea>
-<Sbutton onClick={addPost}>Отправить </Sbutton>
- </STextareaDiv>
+    <STextareaDiv>
+      <Stextarea ref={newPost}>777</Stextarea>
+      <Sbutton onClick={addPost}>Отправить </Sbutton>
+    </STextareaDiv>
   );
 };
 

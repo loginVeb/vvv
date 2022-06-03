@@ -18,7 +18,7 @@ const Main = (props) => {
 
   return (
     <SMain>
-      <Route path='/Profile' render={() => <Profile postData={props.state.profilePage.postData} newPost={props.newPost}/>} />
+      <Route path='/Profile' render={() => <Profile profilePage={props.state.profilePage} newPost={props.newPost} unTextArea={props.unTextArea}/>} />
       <Route path='/diologs' render={() => <Diologs diologsPage={props.state.diologsPage} />} />
     </SMain>
   );

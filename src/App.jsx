@@ -30,7 +30,7 @@ function App(props) {
 <GlobalFonts />
 <Route path='/' render={() => <Header />} />
 <Route path='/' render={() => < Nav/>} />
-<Route path='/' render={() => <Main state={props.state} newPost={props.newPost}/>} />
+<Route path='/' render={() => <Main state={props.state} newPost={props.newPost} unTextArea={props.unTextArea}/>} />
 </StyleAppWrapper>
 </BrowserRouter>
   );

@@ -9,6 +9,8 @@ const state = {
             { id: 1, massage: 'нормально', likeCount: 15 },
         ],
 
+        newTextArea:'сообщение',
+
 
     },
 
@@ -34,8 +36,17 @@ const state = {
 export let newPost = (text) => {
     
 state.profilePage.postData.push({id: 0, massage: text, likeCount: 100,})
-    
  renderEntireTree(state) ;
+ 
 };
+
+export let unTextArea = (text) => {
+    
+    state.profilePage.newTextArea = text;
+     renderEntireTree(state) ;
+
+    };
+    
+    window.state = state;
 
 export default state;
