@@ -1,4 +1,8 @@
-import {renderEntireTree}  from '.././renderEntireTree.js';
+let renderEntireTree = () => {
+  
+}
+
+
 
 const state = {
 
@@ -33,17 +37,23 @@ const state = {
     }
 };
 
-export let newPost = (text) => {
+export const newPost = (text) => {
     
 state.profilePage.postData.push({id: 0, massage: text, likeCount: 100,})
  renderEntireTree(state) ;
  
 };
 
-export let unTextArea = (text) => {
+export const unTextArea = (text) => {
     
     state.profilePage.newTextArea = text;
      renderEntireTree(state) ;
+
+    };
+
+export const subscribe = (subscriber) => {
+    
+    renderEntireTree = subscriber
 
     };
     
