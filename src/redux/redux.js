@@ -1,10 +1,6 @@
-let renderEntireTree = () => {
-  
-}
 
-
-
-const state = {
+let store ={
+_state:{
 
     profilePage: {
 
@@ -35,28 +31,36 @@ const state = {
         ]
 
     }
+}, 
+
+getState(){
+  return this._state;
+}, 
+
+_renderEntireTree(){
+  
+}, 
+
+subscribe(renderEntireTree){
+this._renderEntireTree = renderEntireTree;
+}, 
+
+newPost(text){
+let addPost ={
+id: 0,
+massage: text,
+likeCount: 100,
+  }
+this._state.profilePage.postData.push(addPost);
+this._renderEntireTree(this._state) ;
+}, 
+
+unTextArea(text){
+this._state.profilePage.newTextArea = text;
+this._renderEntireTree(this._state) ;
+}, 
+
 };
 
-export const newPost = (text) => {
-    
-state.profilePage.postData.push({id: 0, massage: text, likeCount: 100,})
- renderEntireTree(state) ;
- 
-};
-
-export const unTextArea = (text) => {
-    
-    state.profilePage.newTextArea = text;
-     renderEntireTree(state) ;
-
-    };
-
-export const subscribe = (subscriber) => {
-    
-    renderEntireTree = subscriber
-
-    };
-    
-    window.state = state;
-
-export default state;
+window.store = store ;
+export default store ;

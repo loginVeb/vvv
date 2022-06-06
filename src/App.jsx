@@ -20,10 +20,7 @@ border: solid 1px blue;
 }
 `
 
-
-
 function App(props) {
- 
   return (
 <BrowserRouter >
 <StyleAppWrapper>
