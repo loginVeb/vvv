@@ -17,9 +17,11 @@ const Main = (props) => {
 
 
   return (
-    <SMain>
-      <Route path='/Profile' render={() => <Profile profilePage={props.state.profilePage} newPost={props.newPost} unTextArea={props.unTextArea}/>} />
-      <Route path='/diologs' render={() => <Diologs diologsPage={props.state.diologsPage} />} />
+ <SMain>
+ <Route path='/Profile' render={() => <Profile
+ profilePage={props.state.profilePage}
+ dispatch={props.dispatch}/>} />
+ <Route path='/diologs' render={() => <Diologs diologsPage={props.state.diologsPage} />} />
     </SMain>
   );
 };

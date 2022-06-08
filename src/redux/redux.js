@@ -36,7 +36,6 @@ _state:{
 getState(){
   return this._state;
 }, 
-
 _renderEntireTree(){
   
 }, 
@@ -44,21 +43,39 @@ _renderEntireTree(){
 subscribe(renderEntireTree){
 this._renderEntireTree = renderEntireTree;
 }, 
-
-newPost(text){
+/*
+newPost(){
 let addPost ={
 id: 0,
-massage: text,
+massage: this.profilePage.newTextArea,
 likeCount: 100,
   }
 this._state.profilePage.postData.push(addPost);
+this._state.profilePage.newTextArea = ' ';
 this._renderEntireTree(this._state) ;
 }, 
 
 unTextArea(text){
 this._state.profilePage.newTextArea = text;
 this._renderEntireTree(this._state) ;
-}, 
+}, */
+
+dispatch(action){
+  if(action.type === 'NEWPOST'){
+let addPost ={
+id: 0,
+massage:this._state.profilePage.newTextArea,
+likeCount: 100,
+  }
+this._state.profilePage.postData.push(addPost);
+this._state.profilePage.newTextArea = ' ';
+this._renderEntireTree(this._state) ;
+  }
+else if(action.type === 'UNTEXTAREA'){
+this._state.profilePage.newTextArea = action.text;
+this._renderEntireTree(this._state) ;
+  }
+}
 
 };
 

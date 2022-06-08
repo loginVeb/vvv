@@ -22,15 +22,12 @@ const MyPosts = (props) => {
   let linkRef = React.createRef();
   
   let addPost = () => {
-    let text = linkRef.current.value;
-  props.newPost(text);
-  props.unTextArea('');
+  props.dispatch({type:'NEWPOST'});
   }
   
   let onUpPost = () => {
     let text = linkRef.current.value;
-    console.log(text);
-    props.unTextArea(text);
+    props.dispatch({type:'UNTEXTAREA',text })
   }
 
   return (

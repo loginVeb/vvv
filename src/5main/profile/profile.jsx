@@ -18,7 +18,7 @@ border: solid 0.1px blue ;
   return (
 <SProfile> 
 <ProfileInfo />
-   <MyPosts profilePage={props.profilePage} newPost={props.newPost} unTextArea={props.unTextArea}/>
+<MyPosts profilePage={props.profilePage} dispatch={props.dispatch}/>
 </SProfile>
   );
 };
