@@ -14,14 +14,16 @@ color:red;
 //border: solid 0.2px blue ;
 `
 const Main = (props) => {
-
-
   return (
  <SMain>
  <Route path='/Profile' render={() => <Profile
+ store={props.store} 
  profilePage={props.state.profilePage}
  dispatch={props.dispatch}/>} />
- <Route path='/diologs' render={() => <Diologs diologsPage={props.state.diologsPage} />} />
+ <Route path='/diologs' render={() => <Diologs 
+ diologsPage={props.state.diologsPage}
+ dispatch={props.dispatch}
+ store={props.store} />} />
     </SMain>
   );
 };

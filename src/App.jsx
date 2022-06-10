@@ -29,6 +29,7 @@ function App(props) {
 <Route path='/' render={() => < Nav/>} />
 <Route path='/' render={() =>
 <Main state={props.state} 
+store={props.store} 
 dispatch={props.dispatch}/>} />
 </StyleAppWrapper>
 </BrowserRouter>

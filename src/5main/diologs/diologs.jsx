@@ -22,7 +22,9 @@ const Diologs = (props) => {
 
       <Messages massageData={props.diologsPage.massageData} />
 
-      <TextareaDiv />
+      <TextareaDiv diologsPage={props.diologsPage}
+ dispatch={props.dispatch}
+ store={props.store}/>
 
     </SDiologs>
   );

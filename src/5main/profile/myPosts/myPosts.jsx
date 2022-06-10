@@ -19,21 +19,21 @@ const MyPosts = (props) => {
     return <Post message={el.massage} likeCount={el.likeCount} id={el.id} />
   });
 
-  let linkRef = React.createRef();
+  
   
   let addPost = () => {
   props.dispatch({type:'NEWPOST'});
   }
   
-  let onUpPost = () => {
-    let text = linkRef.current.value;
+  let onUpPost = (event) => {
+    let text = event.target.value;
     props.dispatch({type:'UNTEXTAREA',text })
   }
 
   return (
 
     <SMyPosts>
-      <textarea ref={linkRef} value={props.profilePage.newTextArea} onChange={onUpPost}/>
+      <textarea  value={props.profilePage.newTextArea} onChange={onUpPost}/>
       <button onClick={addPost}>add post</button>
       <div>
         {postDataNev}

@@ -22,21 +22,28 @@ const Sbutton = styled.button`
 grid-area:10/1/13/4;
 border: solid 0.2px blue ;
 border-radius:15px;
-`
-let newPost = React.createRef();
+` 
 
-let addPost = () => {
-
-  let text = newPost.current.value;
-  alert(text);
+const TextareaDiv = (props) => {
+  
+let upChange = (event) => {
+  let text = event.target.value;
+ props.dispatch({type:'UNTEXTAREA2',text}) 
 };
 
-const TextareaDiv = () => {
+ let addMessage = () => {
+  props.dispatch({type:'NEWMESSAGE'});
+  }
 
   return (
     <STextareaDiv>
-      <Stextarea ref={newPost}>777</Stextarea>
-      <Sbutton onClick={addPost}>Отправить </Sbutton>
+   
+ <Stextarea onChange={upChange} 
+ value={props.diologsPage.newText}></Stextarea>
+      
+  <Sbutton onClick={addMessage}>
+  Отправить 
+  </Sbutton>
     </STextareaDiv>
   );
 };
