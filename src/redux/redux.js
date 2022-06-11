@@ -24,7 +24,7 @@ _state:{
             { id: 2, massage: 'пока' },
             { id: 3, massage: 'досвидания' },
         ], 
-       newText:'сообщение2',
+        newTextArea:'сообщение2',
     }
 }, 
 getState(){
@@ -54,35 +54,62 @@ this._renderEntireTree(this._state) ;
 }, */
 
 dispatch(action){
-  if(action.type === 'NEWPOST'){
+  if(action.type === 'ADD_POST'){
 let addPost ={
 id: 0,
 massage:this._state.profilePage.newTextArea,
 likeCount: 100,
   }
 this._state.profilePage.postData.push(addPost);
-this._state.profilePage.newTextArea = ' ';
+this._state.profilePage.newTextArea = '333 ';
 this._renderEntireTree(this._state) ;
   }
-else if(action.type === 'UNTEXTAREA'){
-this._state.profilePage.newTextArea = action.text;
+else if(action.type === 'UP_TEXTAREA_PROFILEPAGE'){
+this._state.profilePage.newTextArea = action.newText;
 this._renderEntireTree(this._state) ;
   }
-  else if(action.type === 'UNTEXTAREA2'){
-this._state.diologsPage.newText = action.text;
+  else if(action.type === 'UP_TEXTAREA_DIOLOGSPAGE'){
+this._state.diologsPage.newTextArea = action.newText;
 this._renderEntireTree(this._state) ;
 }
-else if(action.type === 'NEWMESSAGE'){
+else if(action.type === 'ADD_WMESSAGE'){
+  
 let addMessage ={
 id:10,
-massage: this._state.diologsPage.newText,
+massage: this._state.diologsPage.newTextArea,
 };
 this._state.diologsPage.massageData.push(addMessage);
-this._state.diologsPage.newText = '777';
+this._state.diologsPage.newTextArea = '777';
 this._renderEntireTree(this._state) ;
   }
 } 
 };
+
+export  const reatorUpTextareaDiologsPage = (text) =>{
+  return {
+    type:'UP_TEXTAREA_DIOLOGSPAGE',
+    newText:text,
+  }
+};
+
+ export  const reatorAddMessage = () =>{
+  return {
+    type:'ADD_WMESSAGE',
+  }
+};
+
+export const reatorAddPost = () =>{
+  return {
+    type:'ADD_POST',
+  }
+}
+
+export  const reatorUpTextareaProfilePage = (text) =>{
+  return {
+    type:'UP_TEXTAREA_PROFILEPAGE',
+    newText:text,
+  }
+}
 
 window.store = store ;
 export default store ;

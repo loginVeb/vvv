@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 //import Users from './user/user.jsx'
+import {reatorUpTextareaDiologsPage} from '../../../redux/redux.js'
+import {reatorAddMessage} from '../../../redux/redux.js'
+
 
 const STextareaDiv = styled.div`
 grid-area:7/1/11/13;
@@ -24,22 +27,24 @@ border: solid 0.2px blue ;
 border-radius:15px;
 ` 
 
+
+
 const TextareaDiv = (props) => {
   
 let upChange = (event) => {
   let text = event.target.value;
- props.dispatch({type:'UNTEXTAREA2',text}) 
+ props.dispatch(reatorUpTextareaDiologsPage(text)) ;
 };
 
  let addMessage = () => {
-  props.dispatch({type:'NEWMESSAGE'});
+  props.dispatch(reatorAddMessage());
   }
 
   return (
     <STextareaDiv>
    
  <Stextarea onChange={upChange} 
- value={props.diologsPage.newText}></Stextarea>
+ value={props.diologsPage.newTextArea}></Stextarea>
       
   <Sbutton onClick={addMessage}>
   Отправить 
