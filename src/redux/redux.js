@@ -1,3 +1,5 @@
+ import reducerProfilePage from './reduserProfilePage.js';
+import reducerDiologsPage from './reduserDiologsPage.js'; 
 
 let store ={
 _state:{
@@ -36,80 +38,18 @@ _renderEntireTree(){
 subscribe(renderEntireTree){
 this._renderEntireTree = renderEntireTree;
 }, 
-/*
-newPost(){
-let addPost ={
-id: 0,
-massage: this.profilePage.newTextArea,
-likeCount: 100,
-  }
-this._state.profilePage.postData.push(addPost);
-this._state.profilePage.newTextArea = ' ';
-this._renderEntireTree(this._state) ;
-}, 
 
-unTextArea(text){
-this._state.profilePage.newTextArea = text;
-this._renderEntireTree(this._state) ;
-}, */
 
 dispatch(action){
-  if(action.type === 'ADD_POST'){
-let addPost ={
-id: 0,
-massage:this._state.profilePage.newTextArea,
-likeCount: 100,
-  }
-this._state.profilePage.postData.push(addPost);
-this._state.profilePage.newTextArea = '333 ';
-this._renderEntireTree(this._state) ;
-  }
-else if(action.type === 'UP_TEXTAREA_PROFILEPAGE'){
-this._state.profilePage.newTextArea = action.newText;
-this._renderEntireTree(this._state) ;
-  }
-  else if(action.type === 'UP_TEXTAREA_DIOLOGSPAGE'){
-this._state.diologsPage.newTextArea = action.newText;
-this._renderEntireTree(this._state) ;
-}
-else if(action.type === 'ADD_WMESSAGE'){
   
-let addMessage ={
-id:10,
-massage: this._state.diologsPage.newTextArea,
-};
-this._state.diologsPage.massageData.push(addMessage);
-this._state.diologsPage.newTextArea = '777';
+ this._state.profilePage = reducerProfilePage(this._state.profilePage,action);
+ 
+this._state.diologsPage = reducerDiologsPage(this._state.diologsPage,action);
+
 this._renderEntireTree(this._state) ;
-  }
-} 
+
+}, 
 };
-
-export  const reatorUpTextareaDiologsPage = (text) =>{
-  return {
-    type:'UP_TEXTAREA_DIOLOGSPAGE',
-    newText:text,
-  }
-};
-
- export  const reatorAddMessage = () =>{
-  return {
-    type:'ADD_WMESSAGE',
-  }
-};
-
-export const reatorAddPost = () =>{
-  return {
-    type:'ADD_POST',
-  }
-}
-
-export  const reatorUpTextareaProfilePage = (text) =>{
-  return {
-    type:'UP_TEXTAREA_PROFILEPAGE',
-    newText:text,
-  }
-}
 
 window.store = store ;
 export default store ;

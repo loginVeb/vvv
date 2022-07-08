@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Post from './post/post.jsx';
-import {reatorUpTextareaProfilePage} from '../../../redux/redux.js'
-import {reatorAddPost} from '../../../redux/redux.js'
+import {creatorUpTextareaProfilePage} from '../../../redux/reduserProfilePage.js'
+import {creatorAddPost} from '../../../redux/reduserProfilePage.js'
 
 const SMyPosts = styled.div`
 grid-area:3/1/13/13;
@@ -24,12 +24,12 @@ const MyPosts = (props) => {
   
   
   let addPost = () => {
-  props.dispatch(reatorAddPost());
+  props.dispatch(creatorAddPost());
   }
   
   let onUpPost = (event) => {
     let text = event.target.value;
-    props.dispatch(reatorUpTextareaProfilePage(text));
+    props.dispatch(creatorUpTextareaProfilePage(text));
   }
 
   return (

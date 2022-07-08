@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 //import Users from './user/user.jsx'
-import {reatorUpTextareaDiologsPage} from '../../../redux/redux.js'
-import {reatorAddMessage} from '../../../redux/redux.js'
+import {creatorUpTextareaDiologsPage} from '../../../redux/reduserDiologsPage.js';
+import {creatorAddMessage} from '../../../redux/reduserDiologsPage.js';
 
 
 const STextareaDiv = styled.div`
@@ -33,11 +33,11 @@ const TextareaDiv = (props) => {
   
 let upChange = (event) => {
   let text = event.target.value;
- props.dispatch(reatorUpTextareaDiologsPage(text)) ;
+ props.dispatch(creatorUpTextareaDiologsPage(text)) ;
 };
 
  let addMessage = () => {
-  props.dispatch(reatorAddMessage());
+  props.dispatch(creatorAddMessage());
   }
 
   return (
