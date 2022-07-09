@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Post from './post/post.jsx';
-import {creatorUpTextareaProfilePage} from '../../../redux/reduserProfilePage.js'
-import {creatorAddPost} from '../../../redux/reduserProfilePage.js'
+import {creatorUpTextareaProfilePage} from '../../../redux/reducerProfilePage.js'
+import {creatorAddPost} from '../../../redux/reducerProfilePage.js'
 
 const SMyPosts = styled.div`
 grid-area:3/1/13/13;

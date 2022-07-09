@@ -1,5 +1,5 @@
- import reducerProfilePage from './reduserProfilePage.js';
-import reducerDiologsPage from './reduserDiologsPage.js'; 
+ import reducerProfilePage from './reducerProfilePage.js';
+import reducerDiologsPage from './reducerDiologsPage.js'; 
 
 let store ={
 _state:{

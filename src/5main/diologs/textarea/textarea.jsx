@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 //import Users from './user/user.jsx'
-import {creatorUpTextareaDiologsPage} from '../../../redux/reduserDiologsPage.js';
-import {creatorAddMessage} from '../../../redux/reduserDiologsPage.js';
+import {creatorUpTextareaDiologsPage} from '../../../redux/reducerDiologsPage.js';
+import {creatorAddMessage} from '../../../redux/reducerDiologsPage.js';
 
 
 const STextareaDiv = styled.div`
