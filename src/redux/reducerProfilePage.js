@@ -5,7 +5,7 @@ const UP_TEXTAREA_PROFILEPAGE = 'UP_TEXTAREA_PROFILEPAGE';
  function reducerProfilePage(state, action) {
 switch(action.type ){
   case ADD_POST:
- let addPost = {
+    let addPost = {
             id: 0,
             massage: state.newTextArea,
             likeCount: 100,
@@ -13,10 +13,10 @@ switch(action.type ){
         state.postData.push(addPost);
         state.newTextArea = '333 ';
         return state ;
-        case UP_TEXTAREA_PROFILEPAGE:
+case UP_TEXTAREA_PROFILEPAGE:
   state.newTextArea = action.newText;
-  return state ;
-  default :
+  return state ; 
+default :
   return state ;
 };
 };
