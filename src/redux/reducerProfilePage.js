@@ -2,7 +2,18 @@ const ADD_POST = 'ADD_POST';
 const UP_TEXTAREA_PROFILEPAGE = 'UP_TEXTAREA_PROFILEPAGE';
 
 
- function reducerProfilePage(state, action) {
+
+let initialState = {
+postData: [
+            { id: 0, massage: 'как дела ', likeCount: 3 },
+            { id: 1, massage: 'нормально', likeCount: 15 },
+        ],
+
+        newTextArea:'сообщение',
+};
+
+
+ function reducerProfilePage( state = initialState , action) {
 switch(action.type ){
   case ADD_POST:
     let addPost = {

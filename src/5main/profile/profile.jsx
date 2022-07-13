@@ -14,7 +14,7 @@ font-family:'tucsononewoff2';
 border: solid 0.1px blue ;
 `
  const Profile = (props ) => {
-
+alert(props.profilePage);
   return (
 <SProfile> 
 <ProfileInfo />

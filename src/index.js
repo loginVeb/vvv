@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import store from './redux/redux.js';
+import store from './redux/redux-store.js';
 import './index.css';
 import App from './App';
 
-let renderEntireTree = (state ) => {
- // alert(props.store);
+let rerenderEntireTree = (state ) => {
  ReactDOM.render(
 <React.StrictMode>
  <App state={state} 
@@ -15,6 +14,9 @@ let renderEntireTree = (state ) => {
  document.getElementById('root') );
 };
 
+rerenderEntireTree(store.getState());
 
-renderEntireTree(store.getState());
-store.subscribe(renderEntireTree)
+store.subscribe(() =>{
+  let state  = store.getState;
+  rerenderEntireTree(state);
+});

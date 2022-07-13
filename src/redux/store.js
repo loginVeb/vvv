@@ -2,6 +2,7 @@
 import reducerDiologsPage from './reducerDiologsPage.js'; 
 
 let store ={
+  
 _state:{
     profilePage: {
         postData: [
@@ -29,14 +30,16 @@ _state:{
         newTextArea:'сообщение2',
     }
 }, 
+
 getState(){
   return this._state;
 }, 
-_renderEntireTree(){
-  
+
+_rerenderEntireTree(){
 }, 
-subscribe(renderEntireTree){
-this._renderEntireTree = renderEntireTree;
+
+subscribe(rerenderEntireTree){
+this._rerenderEntireTree = rerenderEntireTree;
 }, 
 
 
