@@ -33,6 +33,11 @@ text-decoration:none;
     color: "red"
   }}> diologs </SNavLink>
   
+  <SNavLink to="/sidebar" activeStyle={{
+    fontWeight: "bold",
+    color: "red"
+  }}> sidebar </SNavLink>
+  
  </SNav>
   );
 };

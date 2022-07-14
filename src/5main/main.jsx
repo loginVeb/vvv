@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Route } from "react-router-dom";
-import Profile from './profile/profile.jsx'
-import Diologs from './diologs/diologs.jsx'
+import Profile from './profile/profile.jsx';
+import Diologs from './diologs/diologs.jsx';
+import Sidebar from './sidebar/sidebar.jsx';
 
 const SMain = styled.main`
 grid-area:2/4/13/13;display: grid;
@@ -20,10 +21,17 @@ const Main = (props) => {
  store={props.store} 
  profilePage={props.state.profilePage}
  dispatch={props.dispatch}/>} />
+ 
  <Route path='/diologs' render={() => <Diologs 
  diologsPage={props.state.diologsPage}
  dispatch={props.dispatch}
  store={props.store} />} />
+ 
+  <Route path='/sidebar' render={() => <Sidebar 
+ sideBarPage={props.state.sideBarPage}
+ dispatch={props.dispatch}
+ store={props.store} />} />
+ 
     </SMain>
   );
 };
