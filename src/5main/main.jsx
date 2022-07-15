@@ -17,11 +17,10 @@ color:red;
 const Main = (props) => {
   return (
  <SMain>
- <Route path='/Profile' render={() => <Profile
- store={props.store} 
- profilePage={props.state.profilePage}
- dispatch={props.dispatch}/>} />
  
+ <Route path='/Profile' render={() => <Profile store={props.store} />
+}/>
+
  <Route path='/diologs' render={() => <Diologs 
  diologsPage={props.state.diologsPage}
  dispatch={props.dispatch}

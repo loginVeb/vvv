@@ -26,12 +26,18 @@ function App(props) {
 <BrowserRouter >
 <StyleAppWrapper>
 <GlobalFonts />
-<Route path='/' render={() => <Header />} />
-<Route path='/' render={() => < Nav/>} />
+
+<Route path='/' render={() => 
+<Header />
+  }/>
+
 <Route path='/' render={() =>
-<Main state={props.state} 
-store={props.store} 
-dispatch={props.dispatch}/>} />
+< Nav/>
+} />
+
+<Route path='/' render={() =>
+<Main store={props.store} />
+}/>
 </StyleAppWrapper>
 </BrowserRouter>
   );

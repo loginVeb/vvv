@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Post from './post/post.jsx';
-import {creatorUpTextareaProfilePage} from '../../../redux/reducerProfilePage.js'
-import {creatorAddPost} from '../../../redux/reducerProfilePage.js'
 
 const SMyPosts = styled.div`
 grid-area:3/1/13/13;
@@ -13,29 +11,27 @@ font-family:'tucsononewoff2';
 
 `
 
-
-
 const MyPosts = (props) => {
  
-  let postDataNev = props.profilePage.postData.map((el) => {
+  let postDataNev = props.state.postData.map((el) => {
     return <Post message={el.massage} likeCount={el.likeCount} id={el.id} />
   });
 
   
   
   let addPost = () => {
-  props.dispatch(creatorAddPost());
+  props.updataAddPoast();
   }
   
   let onUpPost = (event) => {
     let text = event.target.value;
-    props.dispatch(creatorUpTextareaProfilePage(text));
+    props.updataNevPostText(text);
   }
 
   return (
 
     <SMyPosts>
-      <textarea  value={props.profilePage.newTextArea} onChange={onUpPost}/>
+      <textarea  value={props.state.newTextArea} onChange={onUpPost}/>
       <button onClick={addPost}>add post</button>
       <div>
         {postDataNev}
