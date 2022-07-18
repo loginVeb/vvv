@@ -21,15 +21,9 @@ const Main = (props) => {
  <Route path='/Profile' render={() => <Profile store={props.store} />
 }/>
 
- <Route path='/diologs' render={() => <Diologs 
- diologsPage={props.state.diologsPage}
- dispatch={props.dispatch}
- store={props.store} />} />
+ <Route path='/diologs' render={() => <Diologs store={props.store} />} />
  
-  <Route path='/sidebar' render={() => <Sidebar 
- sideBarPage={props.state.sideBarPage}
- dispatch={props.dispatch}
- store={props.store} />} />
+  <Route path='/sidebar' render={() => <Sidebar store={props.store} />} />
  
     </SMain>
   );

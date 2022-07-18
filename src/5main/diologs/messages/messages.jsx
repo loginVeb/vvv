@@ -19,12 +19,12 @@ border: solid 0.2px blue ;
    
 
    
-let massageDataMap = props.massageData.map((el) =>{return <div id={el.id}> {el.massage} </div>
+let massageDataNev = props.massageData.map((el) =>{return <div id={el.id}> {el.massage} </div>
   });
    
   return (
 <SMessages>
-{massageDataMap} 
+{massageDataNev} 
  </SMessages>
   );
 };

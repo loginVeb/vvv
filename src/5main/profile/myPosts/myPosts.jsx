@@ -17,8 +17,6 @@ const MyPosts = (props) => {
     return <Post message={el.massage} likeCount={el.likeCount} id={el.id} />
   });
 
-  
-  
   let addPost = () => {
   props.updataAddPoast();
   }
@@ -29,7 +27,7 @@ const MyPosts = (props) => {
   }
 
   return (
-
+    
     <SMyPosts>
       <textarea  value={props.state.newTextArea} onChange={onUpPost}/>
       <button onClick={addPost}>add post</button>
