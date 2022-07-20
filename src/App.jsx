@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { device } from './@media';
 import GlobalFonts from './2fonts/Fonts';
-import { BrowserRouter, Route } from "react-router-dom";
+import {BrowserRouter, Route } from "react-router-dom";
 import Header from './3Header/Header';
 import Nav from './4nav/nav.jsx';
 import Main from './5main/main.jsx';
@@ -20,23 +20,23 @@ border: solid 1px blue;
 }
 `
 
-function App(props) {
+function App() {
  
   return (
-<BrowserRouter >
+ <BrowserRouter>
 <StyleAppWrapper>
-<GlobalFonts />
+<GlobalFonts/>
 
 <Route path='/' render={() => 
 <Header />
   }/>
 
 <Route path='/' render={() =>
-< Nav/>
+<Nav />
 } />
 
 <Route path='/' render={() =>
-<Main store={props.store} />
+<Main />
 }/>
 </StyleAppWrapper>
 </BrowserRouter>

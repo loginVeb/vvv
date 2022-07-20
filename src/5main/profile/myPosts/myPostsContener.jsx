@@ -1,27 +1,31 @@
 import React from 'react';
-import MyPosts from './myPosts.jsx'
-import {creatorUpTextareaProfilePage} from '../../../redux/reducerProfilePage.js';
-import {creatorAddPost} from '../../../redux/reducerProfilePage.js';
+import MyPosts from './myPosts.jsx';
+import {creatorUpTextareaProfilePage, creatorAddPost} from '../../../redux/reducerProfilePage.js';
+import StoreContext from '../../../storeContext.jsx';
 
-const MyPostsContener = (props) => {
 
-let state = props.store.getState().profilePage ;
+const MyPostsContener = () => {
+  return <StoreContext.Consumer>
+   { (store) => { 
+let state = store.getState().profilePage ;
 
   let updataAddPoast = () => {
-  props.store.dispatch(creatorAddPost());
+  store.dispatch(creatorAddPost());
   }
   
-  let updataNevPostText = (text ) => {
-  props.store.dispatch(creatorUpTextareaProfilePage(text));
+   let updataNevPostText = (text ) => {
+  store.dispatch(creatorUpTextareaProfilePage(text));
   }
 
-  return (
-    <MyPosts 
+   
+   return <MyPosts 
     updataNevPostText={updataNevPostText}
     updataAddPoast={updataAddPoast} 
     state={state} 
     />
-  )
+    }
+   }
+  </StoreContext.Consumer>
 };
 
 export default MyPostsContener;
