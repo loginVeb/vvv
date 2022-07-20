@@ -5,26 +5,26 @@ import TextareaDiv from './textarea/textarea';
 
 import {creatorUpTextareaDiologsPage, creatorAddMessage} from '../../redux/reducerDiologsPage.js';
 
-
+import StoreContext from '../../storeContext.jsx';
 
 const DiologsContainer = (props) => {
+return <StoreContext.Consumer>
+{ (store) => {
+let diologsData = store.getState().diologsPage.diologsData ;
 
-let diologsData = props.store.getState().diologsPage.diologsData ;
+let massageData = store.getState().diologsPage.massageData ;
 
-let massageData = props.store.getState().diologsPage.massageData ;
-
-let newTextArea = props.store.getState().diologsPage.newTextArea ;
+let newTextArea = store.getState().diologsPage.newTextArea ;
 
   let updataAddMessage = () => {
-  props.store.dispatch(creatorAddMessage());
+  store.dispatch(creatorAddMessage());
   }
   
   let updataTextareaDiologs = (text ) => {
-  props.store.dispatch(creatorUpTextareaDiologsPage(text));
+  store.dispatch(creatorUpTextareaDiologsPage(text));
   }
 
-  return (
-    <>
+  return <>
 <Users diologsData={diologsData} />
 
 <Messages massageData={massageData} />
@@ -34,7 +34,10 @@ let newTextArea = props.store.getState().diologsPage.newTextArea ;
  newTextArea={newTextArea} 
   />
  </>
-  );
+   } 
+ } 
+  </StoreContext.Consumer>
 };
+
 
 export default DiologsContainer ;
