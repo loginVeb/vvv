@@ -17,7 +17,7 @@ border: solid 0.1px blue ;
   return (
 <SProfile> 
 <ProfileInfo />
-<MyPostsContener store={props.store} />
+<MyPostsContener  />
 </SProfile>
   );
 };

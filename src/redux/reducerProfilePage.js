@@ -15,18 +15,22 @@ postData: [
 
  function reducerProfilePage( state = initialState , action) {
 switch(action.type ){
-  case ADD_POST:
+  case ADD_POST: {
     let addPost = {
             id: 0,
             massage: state.newTextArea,
             likeCount: 100,
         };
-        state.postData.push(addPost);
-        state.newTextArea = '333 ';
-        return state ;
+        let stateCopy = {...state} ;
+        stateCopy.postData = [...state.postData] ;
+        stateCopy.postData.push(addPost);
+        stateCopy.newTextArea = 'ура ';
+        return stateCopy ;
+  } 
 case UP_TEXTAREA_PROFILEPAGE:
-  state.newTextArea = action.newText;
-  return state ; 
+   let stateCopy = {...state} ;
+  stateCopy.newTextArea = action.newText;
+  return stateCopy ; 
 default :
   return state ;
 };

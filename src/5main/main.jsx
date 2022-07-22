@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Route } from "react-router-dom";
 import Profile from './profile/profile.jsx';
-import Diologs from './diologs/diologs.jsx';
+import DiologsContainer from './diologs/diologsContainer.jsx';
 //import Sidebar from './sidebar/sidebar.jsx';
 
 const SMain = styled.main`
@@ -20,8 +20,9 @@ const Main = () => {
  
  <Route path='/Profile' render={() => <Profile />
 }/>
+ 
+ <Route path='/diologs' render={() => <DiologsContainer />} />
 
- <Route path='/diologs' render={() => <Diologs />} />
  {/*
   <Route path='/sidebar' render={() => <Sidebar store={props.store} />} />
  */} 

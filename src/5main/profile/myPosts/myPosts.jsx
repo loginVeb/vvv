@@ -13,7 +13,7 @@ font-family:'tucsononewoff2';
 
 const MyPosts = (props) => {
  
-  let postDataNev = props.state.postData.map((el) => {
+  let postDataNev = props.postData.map((el) => {
     return <Post message={el.massage} likeCount={el.likeCount} id={el.id} />
   });
 
@@ -29,7 +29,7 @@ const MyPosts = (props) => {
   return (
     
     <SMyPosts>
-      <textarea  value={props.state.newTextArea} onChange={onUpPost}/>
+      <textarea  value={props.newTextArea} onChange={onUpPost}/>
       <button onClick={addPost}>add post</button>
       <div>
         {postDataNev}
