@@ -1,4 +1,4 @@
-import React from 'react';
+
 import MyPosts from './myPosts.jsx';
 import {creatorUpTextareaProfilePage, creatorAddPost} from '../../../redux/reducerProfilePage.js';
 import {connect} from 'react-redux';

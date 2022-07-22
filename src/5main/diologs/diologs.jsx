@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import DiologsContainer from './diologsContainer.jsx';
 
 import Messages from './messages/messages.jsx';
 import Textarea from './textarea/textarea.jsx';
@@ -18,12 +17,15 @@ font-family:'NameOfYourFontWoff2' ;
 //border: solid 0.2px blue ;
 `
 const Diologs = (props) => {
-let massageData = props.massageData;
+
   return (
  <SDiologs>
  
- <Messages massageData={massageData}/>
- <Textarea newTextArea={props.newTextArea}/>
+ <Messages massageData={props.massageData}/>
+ <Textarea 
+ newTextArea={props.newTextArea}
+ updataAddMessage={props.updataAddMessage}
+ updataTextareaDiologs={props.updataTextareaDiologs}/>
  <User diologsData={props.diologsData} />
  
   </SDiologs>

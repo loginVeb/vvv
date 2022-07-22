@@ -21,17 +21,21 @@ let initialState ={
 function reducerDiologsPage(state = initialState , action) {
 
 switch(action.type){
-  case UP_TEXTAREA_DIOLOGSPAGE:
-state.newTextArea = action.newText;
-return state;
+  case UP_TEXTAREA_DIOLOGSPAGE:{
+  let stateCopy = {...state} ;
+stateCopy.newTextArea = action.newText;
+return stateCopy;
+} 
 case ADD_WMESSAGE:
    let addMessage = {
       id: 10,
       massage: state.newTextArea,
     };
-    state.massageData.push(addMessage);
-    state.newTextArea = '777';
-  return state;
+    let stateCopy = {...state} ;
+stateCopy.massageData = [...state.massageData] ;
+    stateCopy.massageData.push(addMessage);
+    stateCopy.newTextArea = '777';
+  return stateCopy;
 default:
  return state;
  };

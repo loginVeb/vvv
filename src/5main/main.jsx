@@ -20,7 +20,7 @@ const Main = () => {
  
  <Route path='/Profile' render={() => <Profile />
 }/>
- 
+
  <Route path='/diologs' render={() => <DiologsContainer />} />
 
  {/*
